@@ -1,0 +1,15 @@
+
+    .phone-icon {
+        display: inline-block;
+        animation: tilt 1s infinite alternate;
+        color:white;
+      }
+      
+      @keyframes tilt {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(20deg);
+        }
+      }
