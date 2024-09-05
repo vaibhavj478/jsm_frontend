@@ -1,0 +1,14 @@
+ /* .hoverImageWrapper:hover .hoverImage {
+   transform: scale(1.2);
+ }
+
+ .hoverImage {
+    position: relative;
+    align-self: stretch;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  } */

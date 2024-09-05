@@ -1,0 +1,95 @@
+.banner-box {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    height: 0; /* Remove height to maintain aspect ratio */
+    overflow: hidden;
+    /* background-color: black; */
+}
+
+/* Add an overlay */
+.banner-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Black overlay */
+    opacity: 0.3; /* 20% opacity */
+    z-index: 1; /* Place it above the iframe but below the text */
+}
+
+.banner-box iframe,
+.banner-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+   
+}
+
+.category-title-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure it is above the iframe */
+    text-align: center;
+    width: 90%; /* Ensure it spans full width with some padding */
+    padding: 0 10px; /* Optional: Add padding for responsiveness */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+.category-title {
+ 
+    color: #FFB200; /* Adjust to your preference */
+    font-size: 4vw; /* Relative to viewport width */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Add shadow for better visibility */
+   
+    padding: 0 10px; /* Optional: Add padding for responsiveness */
+    margin-bottom: 3rem;
+    
+}
+.category-subtitle {
+ 
+    color: #FFB200; /* Adjust to your preference */
+    font-size: 2vw; /* Relative to viewport width */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Add shadow for better visibility */
+   
+font-family: monospace;
+    
+}
+
+/* Media Queries for additional adjustments */
+@media (max-width: 600px) {
+    .category-title {
+        font-size: 6vw; /* Increase font size for smaller screens */
+    }
+
+    .category-subtitle {
+ 
+        color: #FFB200; /* Adjust to your preference */
+        font-size: 3vw; /* Relative to viewport width */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Add shadow for better visibility */
+       
+    
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    .category-title {
+        font-size: 3vw; /* Adjust for larger screens */
+    }
+
+    .category-subtitle {
+ 
+        color: #FFB200; /* Adjust to your preference */
+        font-size: 2vw; /* Relative to viewport width */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Add shadow for better visibility */
+        
+    }
+}

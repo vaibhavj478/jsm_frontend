@@ -17,6 +17,11 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "./../assets/Images/logo.png";
 import axios from "axios";
+import { padding } from "@mui/system";
+
+import { styled } from '@mui/material/styles';
+
+
 
 const Navbar = () => {
   const theme = useTheme();
@@ -51,9 +56,9 @@ const Navbar = () => {
       setDrawerOpen(false);
     }
   };
-  const handleHomeClick = () => {
+  const handleHomeClick = (value) => {
     setActiveItem("Home");
-    navigate("/");
+    navigate(value);
   };
   const handleDropdownClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -70,7 +75,7 @@ const Navbar = () => {
       <List>
         <ListItem
           button
-          onClick={handleHomeClick}
+          onClick={()=>handleHomeClick("/")}
           style={{ color: activeItem === "Home" ? "red" : "inherit" }}
         >
           <ListItemText primary="Home " />
@@ -89,15 +94,67 @@ const Navbar = () => {
     </div>
   );
 
+
+  const CButton = styled(Button)({
+    boxShadow: 'none',
+
+    // border: '2px solid #3C3633',
+
+    // backgroundColor: '#fff',
+    fontWeight:"600",
+    color: '#FFB200',
+
+    transition :"all 0.5s", 
+
+    '&:hover': {
+        backgroundColor: '#fff',
+        // color: '#fff',
+        boxShadow: 'none',
+    },
+    '&:active': {
+        boxShadow: 'none',
+        backgroundColor: '#FFB200',
+        color: '#fff',
+
+    },
+    '&:focus': {
+        boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+    },
+    '&::before': {
+      'content': '""',
+      position: 'absolute',
+      width: '100%',
+      height: '4px',
+      borderRadius: '4px',
+      backgroundColor: '#E4003A',
+      bottom: '0',
+      left: '0',
+      transformOrigin: 'right',
+      transform: 'scaleX(0)',
+      transition: 'transform .3s ease-in-out',
+    },
+
+    '&:hover::before' : {
+      transformOrigin: 'left',
+      transform: 'scaleX(1)',
+    }
+
+
+});
+
+
+
   return (
     <>
-      <AppBar position="static" color="default">
-        <Toolbar>
+      <AppBar position="static"    style={{  padding:"0.5rem" , backgroundColor:"white" }}  >
+        <Toolbar >
           <Box
             display="flex"
             alignItems="center"
             justifyContent="space-between"
             width="100%"
+            style={{color:"#FFB200" ,  padding:"0"  }}
+            
           >
             {isMobile ? (
               <>
@@ -124,29 +181,29 @@ const Navbar = () => {
               <>
                 <img src={logo} alt="Logo" style={{ height: 40 }} />
                 <Box display="flex">
-                  <Button
+                  <CButton
                     button
-                    onClick={handleHomeClick}
-                    style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                    onClick={()=>handleHomeClick("/")}
+                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
-                    <Typography variant="button">Home</Typography>
-                  </Button>
+                    <Typography >Home</Typography>
+                  </CButton>
                   {menuItems.map((item) => (
-                    <Button
+                    <CButton
                       key={item.name}
                       color="inherit"
                       onClick={() => handleMenuItemClick(item)}
-                      style={{
-                        color: activeItem === item.name ? "red" : "inherit",
-                      }}
+                      // style={{
+                      //   color: activeItem === item.name ? "red" : "inherit",
+                      // }}
                     >
-                      <Typography variant="button">{item.name}</Typography>
-                    </Button>
+                      <Typography >{item.name}</Typography>
+                    </CButton>
                   ))}
-                  <Button color="inherit" onClick={handleDropdownClick}>
-                    Dropdown
-                  </Button>
-                  <Menu
+                  <CButton  onClick={()=>handleHomeClick("/packages")}>
+                     <Typography >Packages</Typography>
+                  </CButton>
+                  {/* <Menu
                     anchorEl={anchorEl}
                     open={Boolean(anchorEl)}
                     onClose={handleDropdownClose}
@@ -156,7 +213,45 @@ const Navbar = () => {
                         {option}
                       </MenuItem>
                     ))}
-                  </Menu>
+                  </Menu> */}
+
+
+                  <CButton
+                    
+                    onClick={()=>handleHomeClick("/")}
+                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                  >
+                    <Typography >Place To Vist</Typography>
+                  </CButton>
+                  <CButton
+                    
+                    onClick={()=>handleHomeClick("/")}
+                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                  >
+                    <Typography >Desert Safari</Typography>
+                  </CButton>
+                  <CButton
+                    
+                    onClick={()=>handleHomeClick("/")}
+                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                  >
+                    <Typography >Car Rental</Typography>
+                  </CButton>
+                  <CButton
+                    
+                    onClick={()=>handleHomeClick("/")}
+                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                  >
+                    <Typography >Gallery</Typography>
+                  </CButton>
+                  <CButton
+                    
+                    onClick={()=>handleHomeClick("/")}
+                  
+                  >
+                    <Typography  >Reviews</Typography>
+                  </CButton>
+
                 </Box>
               </>
             )}

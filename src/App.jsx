@@ -9,9 +9,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
-import Bill from "./pages/Bill";
-import Product from "./pages/Product";
-
+import whatsappicon from "./assets/Images/whatsapp.png";
+import phoneicon from "./assets/Images/phone.png";
 import Home from "./pages/Home";
 
 import Category from "./pages/Category";
@@ -28,6 +27,7 @@ import Navbar from "./components/Navbar";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Footer from "./components/Footer";
 import Reviews from "./pages/Reviews";
+import Packages from "./pages/Packages";
 
 function App() {
   const { prodType } = useSelector((state) => state.prod);
@@ -42,13 +42,14 @@ function App() {
     <>
       <CssBaseline />
       {/* <FloatingBall /> */}
-      <Box style={{ maxWidth: "100%" , fontFamily: 'Amsterdam, sans-serif'  }}>
+      <Box style={{ maxWidth: "100%"   }}>
         <Box >
           <ResponsiveAppBar />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/reviews" element={<Reviews />}></Route>
+            <Route path="/packages" element={<Packages />}></Route>
             <Route path="/cat/:category" element={<Category />}></Route>
             <Route path="/cat/:category/:item" element={<Item />}></Route>
             <Route path="/basket" element={<Basket />}></Route>
@@ -62,8 +63,19 @@ function App() {
           </Routes>
           <Footer />
         </Box>
+        <Box sx={{ position: "fixed", bottom: "20px", right: "10px",zIndex:'1',display:'flex' ,flexDirection:"column",alignItems:'center' }}>
+      <Box><a aria-label="phone" href="tel:+919588970017">
+          <img width={50} height={50} src={phoneicon} />
+        </a></Box>
+        <Box><a aria-label="Chat on WhatsApp" href="https://wa.me/9588970017">
+          <img width={60} height={60} src={whatsappicon} />
+        </a>
+        
+        </Box>
+        
       </Box>
-
+      </Box>
+     
       {/* <span style={{ display: "inline-block", height: "20px", width: "20px", border: "2px solid black", background: "#FFA62F" }} ></span>
           <span style={{ display: "inline-block", height: "20px", width: "20px", border: "2px solid black", background: "#FFC96F" }} ></span>
           <span style={{ display: "inline-block", height: "20px", width: "20px", border: "2px solid black", background: "#FFE8C8" }} ></span>
