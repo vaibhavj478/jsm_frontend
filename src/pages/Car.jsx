@@ -33,11 +33,12 @@ import Sixteen from '../assets/Images/car/16.jpg'
 import Seventeen from '../assets/Images/car/17.jpg'
 
 // width: 100%;
+// border: 2px solid red;
+
 const BannerWrapper = styled(Box)`
-  
     max-width: 450px;
-    min-width:  270px;
-  margin: 1rem auto;
+    min-width:  250px;
+    margin: 1rem auto;
 `;
 
 // Review cards slider configuration
@@ -50,7 +51,7 @@ const sliderSettings = {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
-    pauseOnHover: true
+    // pauseOnHover: true
 };
 
 const cars_img = [
@@ -146,10 +147,7 @@ const Car = () => {
                         <li>- Sedan (Etios / Dzire / Verito)</li>
                         <li>- MPV (Innova / Xylo / Marazzo)</li>
                         <li>- Tempo Traveller (13 seater)</li>
-
                     </ul>
-
-
                     <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
                         <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
                             Learn More or Book Your Ride
@@ -170,7 +168,6 @@ const Car = () => {
                         <li>- Tempo Traveller (13 seater)</li>
 
                     </ul>
-
 
                     <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
                         <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
@@ -216,9 +213,7 @@ const Car = () => {
                         <li>- Sedan (Etios / Dzire / Verito)</li>
                         <li>- MPV (Innova / Xylo / Marazzo)</li>
                         <li>- Tempo Traveller (13 seater)</li>
-
                     </ul>
-
 
                     <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
                         <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
@@ -238,7 +233,6 @@ const Car = () => {
                         <li>- Sedan (Etios / Dzire / Verito)</li>
                         <li>- MPV (Innova / Xylo / Marazzo)</li>
                         <li>- Tempo Traveller (13 seater)</li>
-
                     </ul>
 
 
@@ -289,9 +283,7 @@ const Car = () => {
                         <li>- Sedan (Etios / Dzire / Verito)</li>
                         <li>- MPV (Innova / Xylo / Marazzo)</li>
                         <li>- Tempo Traveller (13 seater)</li>
-
                     </ul>
-
 
                     <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
                         <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
@@ -312,7 +304,6 @@ const Car = () => {
                         <li>- Sedan (Etios / Dzire / Verito)</li>
                         <li>- MPV (Innova / Xylo / Marazzo)</li>
                         <li>- Tempo Traveller (13 seater)</li>
-
                     </ul>
 
 
@@ -363,7 +354,6 @@ const Car = () => {
                         <li>- Sedan (Etios / Dzire / Verito)</li>
                         <li>- MPV (Innova / Xylo / Marazzo)</li>
                         <li>- Tempo Traveller (13 seater)</li>
-
                     </ul>
 
 

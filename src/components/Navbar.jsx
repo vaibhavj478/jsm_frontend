@@ -15,13 +15,33 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "./../assets/Images/logo.png";
+import logo from "./../assets/Images/final_logo.png";
 import axios from "axios";
-import { padding } from "@mui/system";
+import { border, fontWeight, padding } from "@mui/system";
 
 import { styled } from '@mui/material/styles';
 
+const CListItem = styled(ListItem)({
+ 
+  transition :"all 0.5s",
 
+  '&:hover': {
+    backgroundColor: '#E0CCBE',
+    color: '#B60071',
+    boxShadow: 'none',
+    fontWeight:"600"
+  },
+  '&:active': {
+    boxShadow: 'none',
+    backgroundColor: '#E0CCBE',
+    color: '#B60071',
+     fontWeight:"600"
+
+  },
+  '&:focus': {
+    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+  },
+});
 
 const Navbar = () => {
   const theme = useTheme();
@@ -71,25 +91,78 @@ const Navbar = () => {
   const dropdownItems = ["Option 1", "Option 2", "Option 3"];
 
   const drawer = (
-    <div onClick={handleDrawerToggle}>
-      <List>
-        <ListItem
+    <div onClick={handleDrawerToggle}
+    
+    style={{color:"#FFB200", padding:"0" ,  width:"100%"  }}
+
+    >
+      <List 
+      
+      style={{  width:"100%"   }}
+      >
+        <CListItem
           button
           onClick={()=>handleHomeClick("/")}
-          style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+
+          style={{    textAlign:"center" }}
         >
-          <ListItemText primary="Home " />
-        </ListItem>
-        {menuItems.map((item) => (
-          <ListItem
-            button
-            key={item.name}
-            onClick={() => handleMenuItemClick(item)}
-            style={{ color: activeItem === item.name ? "red" : "inherit" }}
-          >
-            <ListItemText primary={item.name} />
-          </ListItem>
-        ))}
+          <ListItemText primary="Home" />
+        </CListItem>
+
+        <CListItem
+          button
+          onClick={()=>handleHomeClick("/packages")}
+          style={{   textAlign:"center" }}
+        >
+          <ListItemText primary="Packages" />
+        </CListItem>
+
+        <CListItem
+          button
+            onClick={()=>handleHomeClick("/sites")}
+            style={{  textAlign:"center" }}
+        >
+          <ListItemText primary="Place To Vist" />
+         
+        </CListItem>
+        <CListItem
+          button
+            onClick={()=>handleHomeClick("/desert_safari")}
+            style={{  textAlign:"center" }}
+        >
+          <ListItemText primary="Desert Safari" />
+         
+        </CListItem>
+        <CListItem
+          button
+            onClick={()=>handleHomeClick("/car")}
+            style={{  textAlign:"center" }}
+        >
+          <ListItemText primary="Car Rental" />
+         
+        </CListItem>
+        <CListItem
+          button
+          onClick={()=>handleHomeClick("/")}
+          style={{  textAlign:"center" }}
+        >
+          <ListItemText primary="Gallery" />
+         
+        </CListItem>
+        <CListItem
+          button
+          onClick={()=>handleHomeClick("/reviews")}
+          style={{  textAlign:"center" }}
+        >
+          <ListItemText primary="Reviews" />
+         
+        </CListItem>
+    
+
+
+
+
+
       </List>
     </div>
   );
@@ -142,8 +215,6 @@ const Navbar = () => {
 
 });
 
-
-
   return (
     <>
       <AppBar position="static"    style={{  padding:"0.5rem" , backgroundColor:"white" }}  >
@@ -153,8 +224,7 @@ const Navbar = () => {
             alignItems="center"
             justifyContent="space-between"
             width="100%"
-            style={{color:"#FFB200" ,  padding:"0"  }}
-            
+            style={{color:"#FFB200", padding:"0"  }}
           >
             {isMobile ? (
               <>
@@ -170,9 +240,12 @@ const Navbar = () => {
                   <MenuIcon />
                 </IconButton>
                 <Drawer
-                  anchor="right"
+                  anchor="bottom"
                   open={drawerOpen}
                   onClose={handleDrawerToggle}
+
+                 
+                
                 >
                   {drawer}
                 </Drawer>
@@ -214,8 +287,6 @@ const Navbar = () => {
                       </MenuItem>
                     ))}
                   </Menu> */}
-
-
                   <CButton
                     
                     onClick={()=>handleHomeClick("/sites")}
@@ -224,34 +295,28 @@ const Navbar = () => {
                     <Typography >Place To Vist</Typography>
                   </CButton>
                   <CButton
-                    
                     onClick={()=>handleHomeClick("/desert_safari")}
                     // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Desert Safari</Typography>
                   </CButton>
                   <CButton
-                    
                     onClick={()=>handleHomeClick("/car")}
                     // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
-                  >
+                    >
                     <Typography >Car Rental</Typography>
                   </CButton>
                   <CButton
-                    
                     onClick={()=>handleHomeClick("/")}
                     // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Gallery</Typography>
                   </CButton>
                   <CButton
-                    
                     onClick={()=>handleHomeClick("/reviews")}
-                  
                   >
                     <Typography  >Reviews</Typography>
                   </CButton>
-
                 </Box>
               </>
             )}
