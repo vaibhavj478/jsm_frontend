@@ -20,7 +20,7 @@ import Checkout from "./pages/Checkout";
 import Checkout_complete from "./pages/Checkout_complete";
 import Vlog from "./pages/Vlog";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes ,  useLocation } from "react-router-dom";
 import { display, width } from "@mui/system";
 import FloatingBall from "./components/FloatingBall";
 import Navbar from "./components/Navbar";
@@ -28,11 +28,17 @@ import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import Footer from "./components/Footer";
 import Reviews from "./pages/Reviews";
 import Packages from "./pages/Packages";
+import ReviewBanner from "./components/reviewsBanner/ReviewBanner";
+import Sites from "./pages/Sites";
+import Desert_safari from "./pages/Desert_safari";
+import Car from "./pages/Car";
 
 function App() {
   const { prodType } = useSelector((state) => state.prod);
 
   const dispatch = useDispatch();
+
+  const location = useLocation(); // Get the current route location
 
   useEffect(() => {
     dispatch(getProdType());
@@ -50,6 +56,9 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/reviews" element={<Reviews />}></Route>
             <Route path="/packages" element={<Packages />}></Route>
+            <Route path="/sites" element={<Sites />}></Route>
+            <Route path="/desert_safari" element={<Desert_safari />}></Route>
+            <Route path="/car" element={<Car />}></Route>
             <Route path="/cat/:category" element={<Category />}></Route>
             <Route path="/cat/:category/:item" element={<Item />}></Route>
             <Route path="/basket" element={<Basket />}></Route>
@@ -59,8 +68,12 @@ function App() {
               element={<Checkout_complete />}
             ></Route>
             <Route path="/vlog" element={<Vlog />}></Route>
-            
           </Routes>
+
+          {/* Conditionally render ReviewBanner based on the current route */}
+          {location.pathname !== "/reviews" && <ReviewBanner />}
+
+
           <Footer />
         </Box>
         <Box sx={{ position: "fixed", bottom: "20px", right: "10px",zIndex:'1',display:'flex' ,flexDirection:"column",alignItems:'center' }}>

@@ -8,6 +8,7 @@ import './styles/Packages.css'
 import Button from "@mui/material/Button";
 
 import { Box } from '@mui/system';
+import { whatsAppUrl } from '../assets/constant';
 
 const Packages = () => {
     return (
@@ -41,7 +42,7 @@ const Packages = () => {
                     </p>
                     <p>Every detail within the Maharaja Tent with Bath Tub is meticulously crafted to create an atmosphere of regality and tranquility. Escape everyday demands and embrace luxury in this sanctuary. Modern amenities include private restrooms with hot showers and lavish toiletries, enhancing your pampering experience.</p>
                     <p>Immerse yourself in opulent comfort, create cherished memories, and rediscover camping with a touch of grandeur. This is the epitome of luxury and refinement, reimagining the camping experience for those seeking uncompromising elegance.</p>
-                    <a aria-label="Chat on WhatsApp" href="https://wa.me/9588970017">    
+                    <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>    
                     <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
                         Book Now
                     </Button>
@@ -73,7 +74,7 @@ const Packages = () => {
                     </p>
                     <p>Every detail within the Maharaja Tent with Bath Tub is meticulously crafted to create an atmosphere of regality and tranquility. Escape everyday demands and embrace luxury in this sanctuary. Modern amenities include private restrooms with hot showers and lavish toiletries, enhancing your pampering experience.</p>
                     <p>Immerse yourself in opulent comfort, create cherished memories, and rediscover camping with a touch of grandeur. This is the epitome of luxury and refinement, reimagining the camping experience for those seeking uncompromising elegance.</p>
-                    <a aria-label="Chat on WhatsApp" href="https://wa.me/9588970017">    
+                    <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>    
                     <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
                         Book Now
                     </Button>
@@ -108,7 +109,7 @@ const Packages = () => {
                         <li>- Morning Breakfast</li>
                     </ul>
                     <p>After Check Out From Camp Will ProceedTo Visit Beautiful Golden Jaisalmer Monuments jaisalmer Fort, Patwon Ki Haveli, Salim Singh Haveli, Jain Temple, Gadisagar Lake.</p>
-                    <a aria-label="Chat on WhatsApp" href="https://wa.me/9588970017">    
+                    <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>       
                     <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
                         Book Now
                     </Button>
@@ -139,7 +140,7 @@ const Packages = () => {
 
                     </ul>
                     <p>After Check Out From Camp Will ProceedTo Visit Beautiful Golden Jaisalmer Monuments jaisalmer Fort, Patwon Ki Haveli, Salim Singh Haveli, Jain Temple, Gadisagar Lake.</p>
-                    <a aria-label="Chat on WhatsApp" href="https://wa.me/9588970017">    
+                    <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>     
                     <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
                         Book Now
                     </Button>
@@ -171,7 +172,7 @@ const Packages = () => {
                         <li>- Comfortable mattresses and warm blankets available.</li>
                     </ul>
                     <h3>OUR MAIN MOTTO IS QUALITY AND SERVICE.</h3>
-                    <a aria-label="Chat on WhatsApp" href="https://wa.me/9588970017">    
+                    <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>    
                     <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
                         Book Now
                     </Button>

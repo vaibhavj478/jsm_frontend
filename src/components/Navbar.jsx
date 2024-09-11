@@ -218,21 +218,21 @@ const Navbar = () => {
 
                   <CButton
                     
-                    onClick={()=>handleHomeClick("/")}
+                    onClick={()=>handleHomeClick("/sites")}
                     // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Place To Vist</Typography>
                   </CButton>
                   <CButton
                     
-                    onClick={()=>handleHomeClick("/")}
+                    onClick={()=>handleHomeClick("/desert_safari")}
                     // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Desert Safari</Typography>
                   </CButton>
                   <CButton
                     
-                    onClick={()=>handleHomeClick("/")}
+                    onClick={()=>handleHomeClick("/car")}
                     // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Car Rental</Typography>
@@ -246,7 +246,7 @@ const Navbar = () => {
                   </CButton>
                   <CButton
                     
-                    onClick={()=>handleHomeClick("/")}
+                    onClick={()=>handleHomeClick("/reviews")}
                   
                   >
                     <Typography  >Reviews</Typography>

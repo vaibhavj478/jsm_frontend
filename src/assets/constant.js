@@ -16,3 +16,6 @@ export  const notify = (msg, type) => {
   });
 
 }
+
+
+export const whatsAppUrl  =  `https://wa.me/9785530017`

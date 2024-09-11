@@ -22,10 +22,12 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.21.3",
+    "react-slick": "^0.30.2",
     "react-toastify": "^10.0.4",
     "react-typed": "^2.0.12",
     "react-window": "^1.8.10",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.24.7",

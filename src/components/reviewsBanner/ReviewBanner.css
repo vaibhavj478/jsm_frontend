@@ -1,0 +1,11 @@
+/* Slick slider default styles */
+.slick-prev:before,
+.slick-next:before {
+  color: #E4003A;
+  
+}
+
+.slick-slide {
+  padding: 10px;
+  outline: none;
+}

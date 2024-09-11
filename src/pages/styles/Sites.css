@@ -1,0 +1,123 @@
+.product-outer-container {
+    position: relative;
+    /* padding-bottom: 56.25%; Maintain 16:9 aspect ratio */
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 80%;
+    margin: 1rem auto;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* background-color: black; */
+
+    /* height: 0;  */
+    /* Remove height to maintain aspect ratio */
+    /* border: 2px solid red; */
+
+}
+
+
+.image-group {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+.image-group:hover .product-image {
+    transform: scale(1.2);
+}
+
+.product-details:hover .product-image {
+    transform: scale(1.2);
+}
+
+.product-details {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #FFB200;
+    font-family: 'Amsterdam';
+    margin-top: 0.25rem;
+}
+
+.product-details h3 {
+    font-size: 1.4rem;
+    color: #B60071;
+    margin-bottom: 1rem;
+}
+
+.product-details ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.product-details ul li {
+    margin-bottom: 0.25rem;
+}
+
+.product-details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.book-now-button {
+    align-self: flex-start;
+}
+
+
+.linkng-tag{
+
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust the max-width value to target your desired mobile breakpoint */
+    .product-outer-container {
+        width: 95%;
+        max-width: 95%;
+        flex-direction: column;
+    }
+
+    .image-group {
+        order: 1;
+    }
+
+    .product-details {
+        order: 2;
+    }
+
+    .product-details h2 {
+        font-size: 1.2rem;
+    }
+    
+    .product-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .book-now-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
