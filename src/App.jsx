@@ -77,10 +77,10 @@ function App() {
           <Footer />
         </Box>
         <Box sx={{ position: "fixed", bottom: "20px", right: "10px",zIndex:'1',display:'flex' ,flexDirection:"column",alignItems:'center' }}>
-      <Box><a aria-label="phone" href="tel:+919588970017">
+      <Box><a aria-label="phone" href="tel:+919785530017">
           <img width={50} height={50} src={phoneicon} />
         </a></Box>
-        <Box><a aria-label="Chat on WhatsApp" href="https://wa.me/9588970017">
+        <Box><a aria-label="Chat on WhatsApp" href="https://wa.me/+919785530017">
           <img width={60} height={60} src={whatsappicon} />
         </a>
         

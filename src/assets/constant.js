@@ -18,4 +18,4 @@ export  const notify = (msg, type) => {
 }
 
 
-export const whatsAppUrl  =  `https://wa.me/9785530017`
+export const whatsAppUrl  =  `https://wa.me/+919785530017`
