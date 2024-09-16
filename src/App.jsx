@@ -76,7 +76,7 @@ function App() {
 
           <Footer />
         </Box>
-        <Box sx={{ position: "fixed", bottom: "20px", right: "10px",zIndex:'1',display:'flex' ,flexDirection:"column",alignItems:'center' }}>
+        <Box sx={{ position: "fixed", bottom: "20px", right: "10px",zIndex:'3',display:'flex' ,flexDirection:"column",alignItems:'center' }}>
       <Box><a aria-label="phone" href="tel:+919785530017">
           <img width={50} height={50} src={phoneicon} />
         </a></Box>
