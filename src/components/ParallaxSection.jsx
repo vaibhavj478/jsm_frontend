@@ -208,7 +208,7 @@ const ParallaxCard = styled(Card)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     // Stack cards vertically in smaller screens
     marginBottom: theme.spacing(3),
-    maxWidth:"300px"
+    maxWidth: "300px"
   },
 }));
 
@@ -261,13 +261,13 @@ const ParallaxSection = () => {
 
   return (
     <SectionContainer>
-      <Parallax 
-        blur={0} 
-        bgImage={bannerImage} 
+      <Parallax
+        blur={0}
+        bgImage={bannerImage}
         strength={400} // Reduced strength for less zoom
-        style={{ 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center' 
+        style={{
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       >
         <BackgroundText
@@ -278,17 +278,17 @@ const ParallaxSection = () => {
         </BackgroundText>
 
         <Container>
-          <Typography style={{color:"white" ,  fontFamily:"Amsterdam"  ,  marginTop:"3.5rem" , marginBottom:"3.5rem"  }} variant="h2" gutterBottom>
-          Our Packages
+          <Typography style={{ color: "white", fontFamily: "Amsterdam", marginTop: "3.5rem", marginBottom: "3.5rem" }} variant="h2" gutterBottom>
+            Our Packages
           </Typography>
-          <Typography variant="h5" gutterBottom 
-          style={{color:"white" ,      marginBottom:"2rem"  }}
+          <Typography variant="h5" gutterBottom
+            style={{ color: "white", marginBottom: "2rem" }}
           >
             Royal Adventure offers well managed plan tour packages in jaisalmer. Our travel tour services is not costly as compare to other travel agents. Jaisalmer is the main attraction of Desert Rajasthan.
           </Typography>
 
           <ZigZagContainer>
-            {[1, ].map((item) => (
+            {[1,].map((item) => (
               <ParallaxCard key={item}>
                 <CardImage
                   component="img"
@@ -296,83 +296,83 @@ const ParallaxSection = () => {
                   alt={`Card Image ${item}`}
                 />
                 <CardContent>
-                  <Typography variant="h6">Padharo Jaisalmer</Typography>
-                  <Typography variant="subtitle1">2 Nights & 3 Days</Typography>
+                  <Typography style={{ color: "#E4003A" }} variant="h6">Padharo Jaisalmer</Typography>
+                  <Typography style={{ color: "#B60071" }} variant="subtitle1">2 Nights & 3 Days</Typography>
                   <Typography variant="body2">
-                  Planning for 2 nights and 3 days in Jaisalmer, then Padharo Jaisalmer is top selling package to cover all tourist destinationof Jaisalmer and sand dunes.
+                    Planning for 2 nights and 3 days in Jaisalmer, then Padharo Jaisalmer is top selling package to cover all tourist destinationof Jaisalmer and sand dunes.
                   </Typography>
-                  <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>    
+                  <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
                     <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
-                        Book Now
+                      Book Now
                     </Button>
-                    </a>
+                  </a>
 
-                    
+
                 </CardContent>
               </ParallaxCard>
             ))}
 
 
-<ParallaxCard >
-                <CardImage
-                  component="img"
-                  image={pic2}
-                  alt={`Card Image `}
-                />
-                <CardContent>
-                  <Typography variant="h6">Golden Triangle Tour</Typography>
-                  <Typography variant="subtitle1"> 3 Nights & 4 Days</Typography>
-                  <Typography variant="body2">
+            <ParallaxCard >
+              <CardImage
+                component="img"
+                image={pic2}
+                alt={`Card Image `}
+              />
+              <CardContent>
+                <Typography style={{ color: "#E4003A" }} variant="h6">Golden Triangle Tour</Typography>
+                <Typography style={{ color: "#B60071" }} variant="subtitle1"> 3 Nights & 4 Days</Typography>
+                <Typography variant="body2">
                   If you are planning to visit Jaisalmer and jodhpur, then Royal Adventure is right website to offer you complete tour covering all major historical tourist places.
-                  </Typography>
-                  <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>    
-                    <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
-                        Book Now
-                    </Button>
-                    </a>
-                </CardContent>
-              </ParallaxCard>
+                </Typography>
+                <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
+                  <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
+                    Book Now
+                  </Button>
+                </a>
+              </CardContent>
+            </ParallaxCard>
 
 
-              <ParallaxCard >
-                <CardImage
-                  component="img"
-                  image={pic3}
-                  alt={`Card Image`}
-                />
-                <CardContent>
-                  <Typography variant="h6">Desert Triangle Tour </Typography>
-                  <Typography variant="subtitle1">5 Nights & 6 Days</Typography>
-                  <Typography variant="body2">
+            <ParallaxCard >
+              <CardImage
+                component="img"
+                image={pic3}
+                alt={`Card Image`}
+              />
+              <CardContent>
+                <Typography style={{ color: "#E4003A" }} variant="h6">Desert Triangle Tour </Typography>
+                <Typography style={{ color: "#B60071" }} variant="subtitle1">5 Nights & 6 Days</Typography>
+                <Typography variant="body2">
                   Best way to explore the beauty of the Thar sand dunes Desert, stay long in Desert with this package covering Jodhpur, Jaisalmer, Ranakpur & Udaipur.
-                  </Typography>
-                  <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>    
-                    <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
-                        Book Now
-                    </Button>
-                    </a>
-                </CardContent>
-              </ParallaxCard>
+                </Typography>
+                <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
+                  <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
+                    Book Now
+                  </Button>
+                </a>
+              </CardContent>
+            </ParallaxCard>
 
-              <ParallaxCard >
-                <CardImage
-                  component="img"
-                  image={pic4}
-                  alt={`Card Image `}
-                />
-                <CardContent>
-                  <Typography variant="h6">Adventure Tour</Typography>
-                  <Typography variant="subtitle1">6 Nights & 7 Days</Typography>
-                  <Typography variant="body2">
+            <ParallaxCard >
+              <CardImage
+                component="img"
+                image={pic4}
+                alt={`Card Image `}
+              />
+              <CardContent>
+                <Typography style={{ color: "#E4003A" }} variant="h6">Adventure Tour</Typography>
+                <Typography style={{ color: "#B60071" }} variant="subtitle1">6 Nights & 7 Days</Typography>
+                <Typography variant="body2">
                   Desert Safari, Camel Safari and Jeep Safari is adventures part of tour packages in Jaisalmer. If you have fun of adventure then Join this package.
-                  </Typography>
-                  <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>    
-                    <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
-                        Book Now
-                    </Button>
-                    </a>
-                </CardContent>
-              </ParallaxCard>
+                </Typography>
+                <a aria-label="Chat on WhatsApp" href={`${whatsAppUrl}`}>
+                  <Button className="book-now-button" variant="contained" sx={{ padding: "0.5rem 1rem", backgroundColor: "#FFB200", marginTop: "1rem" }}>
+                    Book Now
+                  </Button>
+                </a>
+              </CardContent>
+            </ParallaxCard>
 
           </ZigZagContainer>
         </Container>
