@@ -4,7 +4,7 @@ import { Box } from '@mui/system';
 import {ReactTyped} from "react-typed";
 import './styles/BannerForAll.css'; // Assuming the CSS is in this file
 
-const BannerForAll = ({title ,  subtitle  , bannerType ,  bannerUrl}) => {
+const BannerForAll = ({title ,  subtitle  , bannerType ,  bannerUrl ,  isArr=false}) => {
 
     const [reviews, setReviews] = useState({});
     const [player, setPlayer] = useState(null);
@@ -77,16 +77,36 @@ const BannerForAll = ({title ,  subtitle  , bannerType ,  bannerUrl}) => {
         <h1 className="category-title"  style={{fontFamily:"Amsterdam"}}  >{title}</h1>
         <h3  className='category-subtitle'  >
 
-        <ReactTyped
-          strings={[
-            subtitle,
-          ]}
-          typeSpeed={100}
-          loop
-          backSpeed={50}
-          cursorChar="|"
-          showCursor={true}
-        />
+{isArr ?
+
+<ReactTyped
+strings={
+  subtitle
+}
+typeSpeed={100}
+loop
+backSpeed={50}
+cursorChar="|"
+showCursor={true}
+/>
+
+
+
+: 
+
+<ReactTyped
+strings={[
+  subtitle,
+]}
+typeSpeed={100}
+loop
+backSpeed={50}
+cursorChar="|"
+showCursor={true}
+/>
+
+}
+        
         </h3>
         </Box>
     

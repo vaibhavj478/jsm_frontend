@@ -72,9 +72,9 @@ const Reviews = () => {
                     <img src={reviews.bannerUrl} alt={reviews.title} />
                 )}
 
-                <Box className="category-title-box">
-                <h1 className="category-title" >{reviews.title}</h1>
-                <h3  className='category-subtitle'  >{reviews.nickname}</h3>
+                <Box className="review-category-title-box">
+                <h1 className="review-category-title" >{reviews.title}</h1>
+                <h3  className='review-category-subtitle'  >{reviews.nickname}</h3>
                 </Box>
             
             </Box>

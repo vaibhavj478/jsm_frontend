@@ -9,6 +9,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
 
 
+
+
 import  store  from './app/store.js'
 
 import { BrowserRouter } from "react-router-dom"
@@ -22,7 +24,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter >
     <Provider store={store} >
       <PersistGate loading={null} persistor={persistor}>
+     
+      
         <App />
+      
       </PersistGate>
     </Provider>
   </ BrowserRouter >,

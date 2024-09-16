@@ -117,10 +117,10 @@ const ResponsiveAppBar = () => {
             <Typography variant="body2" color="inherit" sx={{ mr: 2 }}>
               Let us help you!
             </Typography>
-            <IconButton className='phone-icon' color="inherit" href="tel:+91 95889 70017">
+            <IconButton className='phone-icon' color="inherit" href="tel:+919785530017">
               <PhoneIcon />
             </IconButton>
-            <IconButton color="inherit" href="mailto:info@trottersjaisalmer.net">
+            <IconButton color="inherit" href="mailto:jaisalmerdesertcampandsafari@gmail.com">
               <EmailIcon />
             </IconButton>
             {/* <IconButton color="inherit" component={Link} to="/cart">
