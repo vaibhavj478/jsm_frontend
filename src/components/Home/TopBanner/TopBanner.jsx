@@ -36,8 +36,9 @@ const TopBanner = () => {
     <>
 
       <section style={{ padding: '2rem' }}>
-        <Typography variant="h4" gutterBottom align="center">
-          JAISALMER HOLIDAY
+        <Typography variant="h5" m={2} style={{fontFamily:"Amsterdam"  , color:"#B60071"}}  gutterBottom align="center">
+          {/* JAISALMER HOLIDAY */}
+          Jaisalmer Holiday
         </Typography>
         <Divider variant="middle" style={{ marginBottom: '1.5rem' }} />
         <Typography variant="body1" align="center" style={{ marginBottom: '2rem' }}>

@@ -5,9 +5,12 @@ import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getProdType } from "./app/productSlice";
 
+import { styled } from '@mui/material/styles';
+
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import {  Typography, Button } from "@mui/material";
 
 import whatsappicon from "./assets/Images/whatsapp.png";
 import phoneicon from "./assets/Images/phone.png";
@@ -20,8 +23,8 @@ import Checkout from "./pages/Checkout";
 import Checkout_complete from "./pages/Checkout_complete";
 import Vlog from "./pages/Vlog";
 
-import { Route, Routes ,  useLocation } from "react-router-dom";
-import { display, width } from "@mui/system";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { border, display, positions, width } from "@mui/system";
 import FloatingBall from "./components/FloatingBall";
 import Navbar from "./components/Navbar";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
@@ -32,6 +35,30 @@ import ReviewBanner from "./components/reviewsBanner/ReviewBanner";
 import Sites from "./pages/Sites";
 import Desert_safari from "./pages/Desert_safari";
 import Car from "./pages/Car";
+
+
+
+const WhatsApp = styled(Button)({
+  boxShadow: 'none',
+  border: '2px solid #25d366',
+  backgroundColor: '#25d366',
+  color: '#fff',
+  '&:hover': {
+    backgroundColor: '#fff',
+    color: '#25d366',
+    boxShadow: 'none',
+  },
+  '&:active': {
+    boxShadow: 'none',
+    backgroundColor: '#fff',
+    color: '#25d366',
+  },
+  '&:focus': {
+    boxShadow: '0 0 0 0.2rem #25d366',
+  },
+});
+
+
 
 function App() {
   const { prodType } = useSelector((state) => state.prod);
@@ -48,8 +75,8 @@ function App() {
     <>
       <CssBaseline />
       {/* <FloatingBall /> */}
-      <Box style={{ maxWidth: "100%"   }}>
-        <Box >
+      <Box style={{ maxWidth: "100%" }}>
+        <Box style={{ positions: "relative" }} >
           <ResponsiveAppBar />
           <Navbar />
           <Routes>
@@ -76,19 +103,33 @@ function App() {
 
           <Footer />
         </Box>
-        <Box sx={{ position: "fixed", bottom: "20px", right: "10px",zIndex:'3',display:'flex' ,flexDirection:"column",alignItems:'center' }}>
-      <Box><a aria-label="phone" href="tel:+919785530017">
-          <img width={50} height={50} src={phoneicon} />
-        </a></Box>
-        <Box><a aria-label="Chat on WhatsApp" href="https://wa.me/+919785530017">
-          <img width={60} height={60} src={whatsappicon} />
-        </a>
-        
-        </Box>
-        
+          <Box sx={{ position: "fixed", bottom: "20px", right: "10px", zIndex: '3', display: 'flex', flexDirection: "column", alignItems: 'center' }}>
+                <Box>
+                      <a aria-label="phone" href="tel:+919785530017">
+                        <img width={50} height={50} src={phoneicon} />
+                      </a>
+                </Box>
+                <Box>
+                      <a aria-label="Chat on WhatsApp" href="https://wa.me/+919785530017">
+                        <img width={60} height={60} src={whatsappicon} />
+                      </a>
+                </Box>
+          </Box>
+          <Box sx={{ position: "fixed", bottom: "0",  zIndex: '4', display: 'flex', flexDirection: "column", alignItems: 'center' }}>
+               
+                <Box>
+                      <a aria-label="Chat on WhatsApp" href="https://wa.me/+919785530017">
+                          <WhatsApp>What's App</WhatsApp>
+                      </a>
+                </Box>
+                <Box>
+                      <a aria-label="phone" href="tel:+919785530017">
+                          <Button>Contact Us</Button>
+                      </a>
+                </Box>
+          </Box>
       </Box>
-      </Box>
-     
+
       {/* <span style={{ display: "inline-block", height: "20px", width: "20px", border: "2px solid black", background: "#FFA62F" }} ></span>
           <span style={{ display: "inline-block", height: "20px", width: "20px", border: "2px solid black", background: "#FFC96F" }} ></span>
           <span style={{ display: "inline-block", height: "20px", width: "20px", border: "2px solid black", background: "#FFE8C8" }} ></span>

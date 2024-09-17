@@ -15,27 +15,28 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "./../assets/Images/final_logo.png";
+// import logo from "./../assets/video/logo.mp4";
+import logo from "../assets/video/logo.mp4";
 import axios from "axios";
-import { border, fontWeight, padding } from "@mui/system";
+import { border, fontWeight, margin, padding, Stack } from "@mui/system";
 
 import { styled } from '@mui/material/styles';
 
 const CListItem = styled(ListItem)({
- 
-  transition :"all 0.5s",
+
+  transition: "all 0.5s",
 
   '&:hover': {
     backgroundColor: '#E0CCBE',
     color: '#B60071',
     boxShadow: 'none',
-    fontWeight:"600"
+    fontWeight: "600"
   },
   '&:active': {
     boxShadow: 'none',
     backgroundColor: '#E0CCBE',
     color: '#B60071',
-     fontWeight:"600"
+    fontWeight: "600"
 
   },
   '&:focus': {
@@ -71,7 +72,7 @@ const Navbar = () => {
 
   const handleMenuItemClick = (item) => {
     setActiveItem(item.name);
-    navigate(`/category/${item.name}`); 
+    navigate(`/category/${item.name}`);
     if (isMobile) {
       setDrawerOpen(false);
     }
@@ -92,72 +93,72 @@ const Navbar = () => {
 
   const drawer = (
     <div onClick={handleDrawerToggle}
-    
-    style={{color:"#FFB200", padding:"0" ,  width:"100%"  }}
+
+      style={{ color: "#FFB200", padding: "0", width: "100%" }}
 
     >
-      <List 
-      
-      style={{  width:"100%"   }}
+      <List
+
+        style={{ width: "100%" }}
       >
         <CListItem
           button
-          onClick={()=>handleHomeClick("/")}
+          onClick={() => handleHomeClick("/")}
 
-          style={{    textAlign:"center" }}
+          style={{ textAlign: "center" }}
         >
           <ListItemText primary="Home" />
         </CListItem>
 
         <CListItem
           button
-          onClick={()=>handleHomeClick("/packages")}
-          style={{   textAlign:"center" }}
+          onClick={() => handleHomeClick("/packages")}
+          style={{ textAlign: "center" }}
         >
           <ListItemText primary="Packages" />
         </CListItem>
 
         <CListItem
           button
-            onClick={()=>handleHomeClick("/sites")}
-            style={{  textAlign:"center" }}
+          onClick={() => handleHomeClick("/sites")}
+          style={{ textAlign: "center" }}
         >
           <ListItemText primary="Place To Vist" />
-         
+
         </CListItem>
         <CListItem
           button
-            onClick={()=>handleHomeClick("/desert_safari")}
-            style={{  textAlign:"center" }}
+          onClick={() => handleHomeClick("/desert_safari")}
+          style={{ textAlign: "center" }}
         >
           <ListItemText primary="Desert Safari" />
-         
+
         </CListItem>
         <CListItem
           button
-            onClick={()=>handleHomeClick("/car")}
-            style={{  textAlign:"center" }}
+          onClick={() => handleHomeClick("/car")}
+          style={{ textAlign: "center" }}
         >
           <ListItemText primary="Car Rental" />
-         
+
         </CListItem>
         <CListItem
           button
-          onClick={()=>handleHomeClick("/")}
-          style={{  textAlign:"center" }}
+          onClick={() => handleHomeClick("/")}
+          style={{ textAlign: "center" }}
         >
           <ListItemText primary="Gallery" />
-         
+
         </CListItem>
         <CListItem
           button
-          onClick={()=>handleHomeClick("/reviews")}
-          style={{  textAlign:"center" }}
+          onClick={() => handleHomeClick("/reviews")}
+          style={{ textAlign: "center" }}
         >
           <ListItemText primary="Reviews" />
-         
+
         </CListItem>
-    
+
 
 
 
@@ -174,24 +175,24 @@ const Navbar = () => {
     // border: '2px solid #3C3633',
 
     // backgroundColor: '#fff',
-    fontWeight:"600",
+    fontWeight: "600",
     color: '#FFB200',
 
-    transition :"all 0.5s", 
+    transition: "all 0.5s",
 
     '&:hover': {
-        backgroundColor: '#fff',
-        // color: '#fff',
-        boxShadow: 'none',
+      backgroundColor: '#fff',
+      // color: '#fff',
+      boxShadow: 'none',
     },
     '&:active': {
-        boxShadow: 'none',
-        backgroundColor: '#FFB200',
-        color: '#fff',
+      boxShadow: 'none',
+      backgroundColor: '#FFB200',
+      color: '#fff',
 
     },
     '&:focus': {
-        boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
     },
     '&::before': {
       'content': '""',
@@ -207,29 +208,43 @@ const Navbar = () => {
       transition: 'transform .3s ease-in-out',
     },
 
-    '&:hover::before' : {
+    '&:hover::before': {
       transformOrigin: 'left',
       transform: 'scaleX(1)',
     }
 
 
-});
+  });
 
   return (
     <>
-      <AppBar position="static"    style={{  padding:"0.5rem" , backgroundColor:"white" }}  >
-        <Toolbar >
+      <AppBar style={{ padding: "0.25rem 0.5rem", backgroundColor: "white", position: "sticky", }}  >
+        <Toolbar style={{ height: "90px", padding: "0" }} >
+          <video autoplay  style={{ height: "80px", margin: "0" }}  >
+
+          <source src={logo} type="video/mp4" />
+          </video>
           <Box
             display="flex"
             alignItems="center"
             justifyContent="space-between"
             width="100%"
-            style={{color:"#FFB200", padding:"0"  }}
+            style={{ color: "#FFB200", padding: "0", margin: "0 0.25rem" }}
           >
             {isMobile ? (
               <>
-                <Box flexGrow={1} display="flex">
-                  <img src={logo} alt="Logo" style={{ height: 40 }} />
+                <Box flexGrow={1} display="flex" >
+                  {/* <img src={logo} alt="Logo" style={{ height: 40 }} /> */}
+
+                  {/* <video src={logo}></video> */}
+
+                  <Stack>
+                    <Typography variant="h6" style={{ color: "#EB5B00", }}  >Jaisalmer Desert Camp And Safari </Typography>
+                    <Typography variant="p" style={{ color: "#B60071", fontFamily: "monospace", fontSize: "medium" }}  >Explore the World, One Journey at a Time.</Typography>
+
+
+                  </Stack>
+
                 </Box>
                 <IconButton
                   edge="end"
@@ -244,20 +259,30 @@ const Navbar = () => {
                   open={drawerOpen}
                   onClose={handleDrawerToggle}
 
-                 
-                
+
+
                 >
                   {drawer}
                 </Drawer>
               </>
             ) : (
               <>
-                <img src={logo} alt="Logo" style={{ height: 40 }} />
+                {/* <img src={logo} alt="Logo" style={{ height: 40 }} /> */}
+                {/* <video src={logo} style={{ height: "40px" , margin:"0"  }}  ></video> */}
+                <Box>
+                  <Stack>
+
+                    <Typography variant="h5" style={{ color: "#EB5B00", }}  >Jaisalmer Desert Camp And Safari </Typography>
+                    <Typography variant="p" style={{ color: "#B60071", fontFamily: "monospace", }}  >Explore the World, One Journey at a Time.</Typography>
+
+                  </Stack>
+
+                </Box>
                 <Box display="flex">
                   <CButton
                     button
-                    onClick={()=>handleHomeClick("/")}
-                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                    onClick={() => handleHomeClick("/")}
+                  // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Home</Typography>
                   </CButton>
@@ -266,15 +291,15 @@ const Navbar = () => {
                       key={item.name}
                       color="inherit"
                       onClick={() => handleMenuItemClick(item)}
-                      // style={{
-                      //   color: activeItem === item.name ? "red" : "inherit",
-                      // }}
+                    // style={{
+                    //   color: activeItem === item.name ? "red" : "inherit",
+                    // }}
                     >
                       <Typography >{item.name}</Typography>
                     </CButton>
                   ))}
-                  <CButton  onClick={()=>handleHomeClick("/packages")}>
-                     <Typography >Packages</Typography>
+                  <CButton onClick={() => handleHomeClick("/packages")}>
+                    <Typography >Packages</Typography>
                   </CButton>
                   {/* <Menu
                     anchorEl={anchorEl}
@@ -288,32 +313,32 @@ const Navbar = () => {
                     ))}
                   </Menu> */}
                   <CButton
-                    
-                    onClick={()=>handleHomeClick("/sites")}
-                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+
+                    onClick={() => handleHomeClick("/sites")}
+                  // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Place To Vist</Typography>
                   </CButton>
                   <CButton
-                    onClick={()=>handleHomeClick("/desert_safari")}
-                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                    onClick={() => handleHomeClick("/desert_safari")}
+                  // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Desert Safari</Typography>
                   </CButton>
                   <CButton
-                    onClick={()=>handleHomeClick("/car")}
-                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
-                    >
+                    onClick={() => handleHomeClick("/car")}
+                  // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                  >
                     <Typography >Car Rental</Typography>
                   </CButton>
                   <CButton
-                    onClick={()=>handleHomeClick("/")}
-                    // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
+                    onClick={() => handleHomeClick("/")}
+                  // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Gallery</Typography>
                   </CButton>
                   <CButton
-                    onClick={()=>handleHomeClick("/reviews")}
+                    onClick={() => handleHomeClick("/reviews")}
                   >
                     <Typography  >Reviews</Typography>
                   </CButton>

@@ -273,6 +273,7 @@ const ParallaxSection = () => {
         <BackgroundText
           variant="h1"
           sx={backgroundTextStyle}
+          style={{textShadow:"0.25rem 0.25rem 0.25rem black"}}
         >
           JAISALMER
         </BackgroundText>

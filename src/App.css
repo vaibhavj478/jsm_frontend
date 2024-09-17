@@ -1,4 +1,9 @@
 
+*, *::after , *::before{
+
+  transition: all 0.5s;
+}
+
     .phone-icon {
         display: inline-block;
         animation: tilt 1s infinite alternate;
@@ -13,3 +18,5 @@
           transform: rotate(20deg);
         }
       }
+
+
