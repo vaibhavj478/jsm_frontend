@@ -45,7 +45,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 import MenuIcon from "@mui/icons-material/Menu";
 import Gallery from "./pages/Gallery";
-import Privacy from "./pages/Privacy";
+// import Privacy from "./pages/Privacy";
 
 const WhatsAppBtn = styled(Button)({
   boxShadow: 'none',
@@ -131,7 +131,7 @@ function App() {
             <Route path="/sites" element={<Sites />}></Route>
             <Route path="/desert_safari" element={<Desert_safari />}></Route>
             <Route path="/gallery" element={<Gallery />}></Route>
-            <Route path="/pandp" element={<Privacy />}></Route>
+            {/* <Route path="/pandp" element={<Privacy />}></Route> */}
             <Route path="/car" element={<Car />}></Route>
             <Route path="/cat/:category" element={<Category />}></Route>
             <Route path="/cat/:category/:item" element={<Item />}></Route>
