@@ -8,10 +8,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./ReviewBanner.css"
+import { border } from '@mui/system';
 
 // Styled component for the banner container
 const BannerWrapper = styled(Box)`
-  width: 100%;
+  width: 95%;
   max-width: 1200px;
   margin: 3rem auto;
   padding: 40px 20px;

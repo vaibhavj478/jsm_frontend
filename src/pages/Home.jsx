@@ -17,36 +17,6 @@ import ParallaxSection from "../components/ParallaxSection";
 
 
 
-
-const BannerContainer = styled(Box)(({ theme }) => ({
-  backgroundImage: `url(${bannerImage})`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  height: "70vh",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  color: "#FFB200",
-
-  textShadow:"3px 3px 10px black",
-  textAlign: "center",
-  [theme.breakpoints.down("md")]: {
-    height: "50vh",
-  },
-  [theme.breakpoints.down("sm")]: {
-    height: "40vh",
-  },
-}));
-
-const BannerContent = styled(Box)(({ theme }) => ({
-  // backgroundColor: "rgba(0, 0, 0, 0.5)",
-  padding: theme.spacing(3),
-  borderRadius: theme.shape.borderRadius,
-  [theme.breakpoints.down("sm")]: {
-    padding: theme.spacing(2),
-  },
-}));
-
 // .hoverImageWrapper:hover .hoverImage {
 //   transform: scale(1.2);
 // }
@@ -60,7 +30,7 @@ const Home = () => {
             "Travel Far, Create Memories Closer",
             "Discover More with Every Mile",
             "Wander Beyond, Experience Beyond"
-          ]} bannerType={'image'} bannerUrl={`${bannerImage}`}   isArr={true} />
+          ]} bannerType={'image'} bannerUrl={``}   isArr={true} />
 
      
       {/* <Services /> */}

@@ -1,8 +1,51 @@
 
 
-
+/* 
 .MuiBox-root .css-3drcue{
 
 
     justify-content: center !important;
+} */
+
+.siteNavbarContainer{
+    padding: "0.25rem 0.5rem";
+     background-color: white !important ;
+    
+}
+
+.siteNavbar{
+
+     height: "90px";
+      padding: "0"
+}
+
+.siteLogo{
+
+    width: 80px;
+    margin: 0;
+  
+}
+
+
+/* Mobile screen styles */
+@media screen and (max-width: 768px) {
+   .siteNavbarContainer{
+    padding: 0;
+
+   }
+   
+    .siteNavbar {
+        height: 60px; /* Adjust height for mobile */
+        padding: 0 10px; /* Add some padding for spacing */
+    }
+
+    .siteLogo {
+        width: 50px; /* Adjust logo size for mobile */
+        margin: 0;
+
+    }
+
+    .hiddenMenuBtn{
+        display: none;
+    }
 }

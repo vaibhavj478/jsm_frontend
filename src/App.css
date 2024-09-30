@@ -1,22 +1,195 @@
-
-*, *::after , *::before{
+*,
+*::after,
+*::before {
 
   transition: all 0.5s;
 }
 
-    .phone-icon {
-        display: inline-block;
-        animation: tilt 1s infinite alternate;
-        color:white;
-      }
-      
-      @keyframes tilt {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(20deg);
-        }
-      }
+.footerIconsDesktopGroups {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 1rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+ 
+}
+
+.footerIconsDesktopBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  background-image: -webkit-linear-gradient(top, #df9d03, #fcc74c);
+  background-image: linear-gradient(top, #df9d03, #fcc74c);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px #fcc03593, inset 0px -3px 1px 1px #ca98237a;
+  /* float:left; */
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+/* border: 2px solid red; */
+}
+
+.footerIconsDesktopBtn:after{
+  color:#fcc74c;
+  content: "";
+  display: block;
+  font-size: 30px;
+  height: 30px;
+  text-decoration: none;
+  text-shadow: 0px -1px 1px #fcc74c, 1px 1px 1px #df9d03;
+  position: absolute;
+  width: 30px;
+}
 
 
+.footerIconsSocialGroupsBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fcc74c;
+}
+.InstagramIconBtn{
+  color: #fff !important;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.FacebookIconBtn{
+  color: #405de6 !important;
+}
+.WhatsAppIconBtn ,  .PhoneIphoneIconBtn{
+  color: white !important ;
+}
+
+
+.footerIconsAppMobileGroups {
+  display: none;
+}
+
+.footerBtnGroups {
+  display: none;
+}
+
+.phone-icon {
+  display: inline-block;
+  animation: tilt 1s infinite alternate;
+  color: white;
+}
+
+.footerIconsSocialGroups{
+
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.MuiIcon-fontSizeLarge {
+  font-size: 2rem;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+
+
+/* Mobile screen styles */
+@media screen and (max-width: 768px) {
+  .siteNavbarContainer {
+    padding: 0;
+  }
+
+  .siteNavbar {
+    height: 60px;
+    /* Adjust height for mobile */
+    padding: 0 10px;
+    /* Add some padding for spacing */
+  }
+
+  .siteLogo {
+    width: 50px;
+    /* Adjust logo size for mobile */
+    margin: 0;
+  }
+
+  .footerIconsDesktopGroups {
+    display: none;
+  }
+
+
+  .footerIconsAppMobileGroups {
+
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .footerIconsAppMobileBtn {
+
+
+    /* background-color: #FFB200; */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: "center";
+
+    width: 50px;
+    height: 50px;
+
+    background-image: -webkit-linear-gradient(top, #eea702, #FFB200);
+    background-image: linear-gradient(top, #eea702, #FFB200);
+    border-radius: 50%;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px #FFB200, inset 0px -3px 1px 1px #da9a0491;
+    float: left;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+
+
+  }
+
+  .button:after {
+    color: #eea702;
+    content: "";
+    display: block;
+    font-size: 30px;
+    height: 30px;
+    text-decoration: none;
+    text-shadow: 0px -1px 1px #da9904, 1px 1px 1px #FFB200;
+    position: absolute;
+    width: 30px;
+  }
+
+
+
+  .footerBtnGroups {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    z-index: 4;
+  }
+
+
+}

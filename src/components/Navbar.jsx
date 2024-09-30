@@ -22,6 +22,8 @@ import { border, fontWeight, margin, padding, Stack } from "@mui/system";
 
 import { styled } from '@mui/material/styles';
 
+import './styles/Navbar.css'
+
 const CListItem = styled(ListItem)({
 
   transition: "all 0.5s",
@@ -44,7 +46,7 @@ const CListItem = styled(ListItem)({
   },
 });
 
-const Navbar = () => {
+const Navbar = ({ buttonRef }) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -144,7 +146,7 @@ const Navbar = () => {
         </CListItem>
         <CListItem
           button
-          onClick={() => handleHomeClick("/")}
+          onClick={() => handleHomeClick("/gallery")}
           style={{ textAlign: "center" }}
         >
           <ListItemText primary="Gallery" />
@@ -218,11 +220,11 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar style={{ padding: "0.25rem 0.5rem", backgroundColor: "white", position: "sticky", }}  >
-        <Toolbar style={{ height: "90px", padding: "0" }} >
-          <video autoplay  style={{ height: "80px", margin: "0" }}  >
+      <AppBar  className="siteNavbarContainer"  style={{position:"sticky"}} >
+        <Toolbar className="siteNavbar"  >
+          <video  className="siteLogo"    autoplay >
 
-          <source src={logo} type="video/mp4" />
+              <source src={logo} type="video/mp4" />
           </video>
           <Box
             display="flex"
@@ -233,24 +235,27 @@ const Navbar = () => {
           >
             {isMobile ? (
               <>
-                <Box flexGrow={1} display="flex" >
+                <Box flexGrow={1} display="flex" sx={{flexDirection:"column"}} >
                   {/* <img src={logo} alt="Logo" style={{ height: 40 }} /> */}
 
                   {/* <video src={logo}></video> */}
 
-                  <Stack>
-                    <Typography variant="h6" style={{ color: "#EB5B00", }}  >Jaisalmer Desert Camp And Safari </Typography>
-                    <Typography variant="p" style={{ color: "#B60071", fontFamily: "monospace", fontSize: "medium" }}  >Explore the World, One Journey at a Time.</Typography>
-
-
-                  </Stack>
+                  
+                    <Typography variant="h6" style={{ color: "#EB5B00", fontSize:"1rem" }}  >Jaisalmer Desert Camp And Safari </Typography>
+                    <Typography variant="p" style={{ color: "#B60071", fontFamily: "monospace", fontSize:"0.6rem" }}  >Explore the World, One Journey at a Time.</Typography>
+                 
 
                 </Box>
                 <IconButton
                   edge="end"
                   color="inherit"
                   aria-label="menu"
+                  ref={buttonRef}
                   onClick={handleDrawerToggle}
+
+                  className="hiddenMenuBtn"
+
+                  style={{display:"none"}}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -332,7 +337,7 @@ const Navbar = () => {
                     <Typography >Car Rental</Typography>
                   </CButton>
                   <CButton
-                    onClick={() => handleHomeClick("/")}
+                    onClick={() => handleHomeClick("/gallery")}
                   // style={{ color: activeItem === "Home" ? "red" : "inherit" }}
                   >
                     <Typography >Gallery</Typography>

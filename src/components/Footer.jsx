@@ -8,6 +8,7 @@ const Footer = () => {
         backgroundColor: 'grey.900',
         color: 'common.white',
         py: 6,
+        paddingBottom:"2.5rem"
       }}
     >
       <Container maxWidth="lg">
