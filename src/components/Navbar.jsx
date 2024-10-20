@@ -241,8 +241,8 @@ const Navbar = ({ buttonRef }) => {
                   {/* <video src={logo}></video> */}
 
                   
-                    <Typography variant="h6" style={{ color: "#EB5B00", fontSize:"1rem" }}  >Jaisalmer Desert Camp And Safari </Typography>
-                    <Typography variant="p" style={{ color: "#B60071", fontFamily: "monospace", fontSize:"0.6rem" }}  >Explore the World, One Journey at a Time.</Typography>
+                    <Typography variant="h6" style={{ color: "#EB5B00", fontSize:"1.5rem" , fontFamily:"sans-serif" }}  >Jaisalmer Desert Camp And Safari </Typography>
+                    {/* <Typography variant="p" style={{ color: "#B60071", fontFamily: "monospace", fontSize:"0.6rem" }}  >Explore the World, One Journey at a Time.</Typography> */}
                  
 
                 </Box>
