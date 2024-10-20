@@ -78,7 +78,12 @@
 
 .phone-icon {
   display: inline-block;
-  animation: tilt 1s infinite alternate;
+  animation: tilt 2s infinite alternate;
+  color: white;
+}
+.phone-icon2 {
+  display: inline-block;
+  animation: tilt2 2s infinite alternate;
   color: white;
 }
 
@@ -101,9 +106,22 @@
 @keyframes tilt {
   0% {
     transform: rotate(0deg);
+    scale: 1;
   }
   100% {
-    transform: rotate(20deg);
+    transform: rotate(50deg);
+    scale: 1.2;
+  }
+}
+@keyframes tilt2 {
+  0% {
+    
+    transform: rotate(50deg);
+    scale: 1.2;
+  }
+  100% {
+    transform: rotate(0deg);
+    scale: 1;
   }
 }
 

@@ -13,7 +13,10 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 import AdbIcon from '@mui/icons-material/Adb';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 import { Link } from 'react-router-dom'; // If you're using react-router for navigation
 
 const pages = ['Our Hotel', 'FAQ', 'Travel Safe', 'About Us', 'Taxi', 'Attractions'];
@@ -39,13 +42,13 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar 	sx={{ display: { md: 'none', lg: 'block' , backgroundColor:"#FFB200" } }} position="static">
+    <AppBar 	sx={{ display: { md: 'none', lg: 'block' , backgroundColor:"black" } }} position="static">
       <Container  maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' ,  justifyContent:"center"}} disableGutters>
           
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'none' } }}>
+            {/* <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -78,7 +81,7 @@ const ResponsiveAppBar = () => {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
           {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
@@ -99,7 +102,7 @@ const ResponsiveAppBar = () => {
           >
             LOGO
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -111,18 +114,25 @@ const ResponsiveAppBar = () => {
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box> */}
 
-          <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
-            <Typography variant="body2" color="inherit" sx={{ mr: 2 }}>
+          <Box sx={{ flexGrow: 0, gap:"1rem", display: 'flex', alignItems: 'center' }}>
+            {/* <Typography variant="body2" color="inherit" sx={{ mr: 2 }}>
               Let us help you!
-            </Typography>
-            <IconButton className='phone-icon' color="inherit" href="tel:+919785530017">
+            </Typography> */}
+            <IconButton className='phone-icon2' color="inherit" href="tel:+919785530017">
               <PhoneIcon />
             </IconButton>
-            <IconButton color="inherit" href="mailto:jaisalmerdesertcampandsafari@gmail.com">
+            <IconButton className='phone-icon' color="inherit" href="mailto:jaisalmerdesertcampandsafari@gmail.com">
               <EmailIcon />
             </IconButton>
+            <IconButton className='phone-icon2' color="inherit" href="https://www.instagram.com/jaisalmerdesertcampandsafari?igsh=dnpuN2FjYThwbXh0">
+              <InstagramIcon />
+            </IconButton>
+            <IconButton className='phone-icon' color="inherit" href="https://www.facebook.com/profile.php?id=61564904201497&mibextid=LQQJ4d">
+              <FacebookIcon />
+            </IconButton>
+        
             {/* <IconButton color="inherit" component={Link} to="/cart">
               <ShoppingCartIcon />
             </IconButton> */}
